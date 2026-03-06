@@ -1,0 +1,291 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: S1_R3_R4 - AT2_PBE 2 - Insomnia
+meta:
+  id: wrk_227edf7f8d6c4d8f893f42d614bcd7a4
+  created: 1772710286933
+  modified: 1772710286933
+  description: ""
+collection:
+  - name: Professores
+    meta:
+      id: fld_0eac763c86624e5191dc3c9884352b14
+      created: 1772710334910
+      modified: 1772710437223
+      sortKey: -1000000000
+      description: ""
+    children:
+      - url: http://localhost:8000/professores/
+        name: select
+        meta:
+          id: req_ff3964ad15194dc89a2464dd233a1d04
+          created: 1772710334915
+          modified: 1772805821076
+          isPrivate: false
+          description: ""
+          sortKey: -1772191660625
+        method: GET
+        parameters:
+          - name: id_professor
+            value: ""
+            description: ""
+            disabled: false
+        headers:
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8000/professores/
+        name: insert
+        meta:
+          id: req_bba7c1d90ee14215845e8a57eeab82b3
+          created: 1772710334920
+          modified: 1772805943729
+          isPrivate: false
+          description: ""
+          sortKey: -1772191660575
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"nome":"Mano Teste",
+            	"email":"manoteste@gmail.com",
+            	"disciplina":"TST",
+            	"cargaHoraria": 800000.2
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8000/professores/
+        name: update
+        meta:
+          id: req_171f72292ff3413b9c5769fa4aad6c56
+          created: 1772710334926
+          modified: 1772805904670
+          isPrivate: false
+          description: ""
+          sortKey: -1772191660550
+        method: PATCH
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"nome":"Mano Boca"
+            }
+        parameters:
+          - name: id_professor
+            value: "6"
+            description: ""
+            disabled: false
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8000/professores/
+        name: delete
+        meta:
+          id: req_253b4840e47b4ef2abe46b28e744241e
+          created: 1772710334931
+          modified: 1772805953483
+          isPrivate: false
+          description: ""
+          sortKey: -1772191660525
+        method: DELETE
+        parameters:
+          - name: id_professor
+            value: "7"
+            description: ""
+            disabled: false
+        headers:
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Alunos
+    meta:
+      id: fld_52c9761d8f5244a98d7675a474b6a7ad
+      created: 1772710337801
+      modified: 1772710337801
+      sortKey: -1000000000
+      description: ""
+    children:
+      - url: http://localhost:8000/alunos/
+        name: select
+        meta:
+          id: req_5f703f04b1324feeb0083b18be6001af
+          created: 1772710337807
+          modified: 1772796792837
+          isPrivate: false
+          description: ""
+          sortKey: -1772191660625
+        method: GET
+        parameters:
+          - name: id_aluno
+            value: ""
+            description: ""
+            disabled: false
+        headers:
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8000/alunos/
+        name: insert
+        meta:
+          id: req_608d74b1f38c4926a27643375a7c68a7
+          created: 1772710337813
+          modified: 1772804677154
+          isPrivate: false
+          description: ""
+          sortKey: -1772191660575
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"nome":"Cauan",
+            	"email":"toquinha@gmail.com",
+            	"matricula":"00002",
+            	"curso":"DES",
+            	"mediaFinal": 10
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8000/alunos/
+        name: update
+        meta:
+          id: req_ff806d1a9bf843c9ac1596c209d943b4
+          created: 1772710337818
+          modified: 1772805995003
+          isPrivate: false
+          description: ""
+          sortKey: -1772191660550
+        method: PATCH
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"curso":"Front-End"
+            }
+        parameters:
+          - name: id_aluno
+            value: "4"
+            description: ""
+            disabled: false
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8000/alunos/
+        name: delete
+        meta:
+          id: req_56b3086baf53423cb258fd03c36a72bd
+          created: 1772710337824
+          modified: 1772806008504
+          isPrivate: false
+          description: ""
+          sortKey: -1772191660525
+        method: DELETE
+        parameters:
+          - name: id_aluno
+            value: "4"
+            description: ""
+            disabled: false
+        headers:
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_b86f08e984f3caf75b3aa7681f018fbd153f920c
+    created: 1772710286975
+    modified: 1772710286975
+environments:
+  name: Base Environment
+  meta:
+    id: env_b86f08e984f3caf75b3aa7681f018fbd153f920c
+    created: 1772710286967
+    modified: 1772710286967
+    isPrivate: false
